@@ -1,6 +1,8 @@
 const Pool = require('pg').Pool
 require("dotenv").config();
 
+
+/*
 const devConfig = {
   user: process.env.PG_USER,
   host: process.env.PG_HOST,
@@ -10,13 +12,22 @@ const devConfig = {
 }
 
 const proConfig = {
-  connectionString: 'postgres://qvkcywazlhfbcs:2da9199969faad2006865354bc8db8c2d4dee175851816e7a5bd93b116751542@ec2-52-4-104-184.compute-1.amazonaws.com:5432/d8nqucblo227r4' //heroku addons
+  connectionString: process.env.DATABASE_URL //heroku addons
 }
 
 const pool = new Pool(
   process.env.NODE_ENV === "production" ? proConfig : devConfig
 );
+*/
 
+const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`;
+
+const proConfig = process.env.DATABASE_URL; //heroku addons
+
+const pool = new Pool({
+  connectionString:
+    process.env.NODE_ENV === "production" ? proConfig : devConfig,
+});
 
 const getEmployees = () => {
   return new Promise(function(resolve, reject) {
