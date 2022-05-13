@@ -10,7 +10,7 @@ const devConfig = {
 }
 
 const proConfig = {
-  connectionString: process.env.DATABASE_URL //heroku addons
+  connectionString: 'postgres://qvkcywazlhfbcs:2da9199969faad2006865354bc8db8c2d4dee175851816e7a5bd93b116751542@ec2-52-4-104-184.compute-1.amazonaws.com:5432/d8nqucblo227r4' //heroku addons
 }
 
 const pool = new Pool(
