@@ -1,10 +1,19 @@
 const express = require('express')
 const app = express()
 const port = 3001
-
-
 const employee_model = require('./employee_model')
+const path = require("path")
+const PORT = process.env.PORT || 3001;
 
+//process.env.PORT
+
+//middleware
+app.use(express.static(path.join(__dirname, "client/build")))
+if (process.env.NODE_ENV === "production"){
+  app.use(express.static(path.join(__dirname, "client/build")))
+}
+
+//app.use(cors());
 app.use(express.json())
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -63,6 +72,11 @@ app.post('/employees/sort', (req, res) => {
 })
 })
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}.`)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"))
+
+})
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}.`)
 })

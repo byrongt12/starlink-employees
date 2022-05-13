@@ -1,11 +1,22 @@
 const Pool = require('pg').Pool
-const pool = new Pool({
-  user: 'byron',
-  host: 'localhost',
-  database: 'epiuse',
-  password: 'root',
-  port: 5432,
-});
+require("dotenv").config();
+
+const devConfig = {
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
+}
+
+const proConfig = {
+  connectionString: process.env.DATABASE_URL //heroku addons
+}
+
+const pool = new Pool(
+  process.env.NODE_ENV === "production" ? proConfig : devConfig
+);
+
 
 const getEmployees = () => {
   return new Promise(function(resolve, reject) {
@@ -14,7 +25,12 @@ const getEmployees = () => {
       if (error) {
         reject(error)
       }
-      resolve(results.rows);
+      if (!results){
+        resolve()
+      }
+      else{
+        resolve(results.rows)
+      }
     })
   }) 
 }

@@ -12,6 +12,7 @@ import MultipleFieldSelector from './components/MultipleFieldSelector';
 import { GiCheckboxTree   } from 'react-icons/gi';
 import { BsBuilding   } from 'react-icons/bs';
 import { BsPerson   } from 'react-icons/bs';
+import ReactDOM from 'react-dom'
 
 import moment from 'moment';
 
@@ -46,6 +47,7 @@ function App() {
     /*setEmployeesArr(employees)*/
     setFilterFields(['Birthdate', 'Salary', 'Employee Number'])
     setOrderList(['Ascending', 'Descending'])
+    document.title = "StarLink Employees"
   }, []);
 
   useEffect(() => {
@@ -104,8 +106,10 @@ function App() {
     }
   };
 
+  //proxy
+
   function getEmployee() {
-    fetch('http://localhost:3001/employees')
+    fetch('/employees')
       .then(response => {
         return response.text();
       })
@@ -116,7 +120,7 @@ function App() {
   }
 
   function getEmployeeSGR() {
-    fetch('http://localhost:3001/employees/sgr')
+    fetch('/employees/sgr')
       .then(response => {
         return response.text();
       })
@@ -127,7 +131,7 @@ function App() {
   }
 
   function getEmployeeSGD() {
-    fetch('http://localhost:3001/employees/sgd')
+    fetch('/employees/sgd')
       .then(response => {
         return response.text();
       })
@@ -190,7 +194,7 @@ function App() {
   
   function filterEmployees() {
   
-    fetch('http://localhost:3001/employees/filter', {
+    fetch('/employees/filter', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -208,7 +212,7 @@ function App() {
 
   function sortEmployees() {
 
-    fetch('http://localhost:3001/employees/sort', {
+    fetch('/employees/sort', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
