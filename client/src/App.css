@@ -1,0 +1,306 @@
+
+
+body{
+  background-color: #FAFCFF;
+}
+
+#outerDiv{
+  margin: auto;
+  padding-top: 70px;
+  width: 90%;
+
+}
+
+#toolBox{
+  background-color: #FAFCFF;
+  padding: 30px;
+  /*border: 1px solid #e2e2e2*/
+  min-width: 1300px;
+  
+}
+
+#displayTreeButton{
+  background-color: #434EE8;  
+  border-radius: 20px;
+  border: 1px solid #434EE8;
+  position: absolute;
+  top: 13%;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+#displayTreeText{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  float:left;
+  color: white;
+}
+
+#displayTreeButton:hover{
+  cursor: pointer;
+  box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -webkit-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -moz-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+}
+
+#displaySalaryRole{
+  background-color: #434EE8;  
+  border-radius: 20px;
+  border: 1px solid #434EE8;
+  position: absolute;
+  top: 18%;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+#displaySalaryRoleText{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  float:left;
+  color: white;
+
+} 
+
+#displaySalaryRole:hover{
+  cursor: pointer;
+  box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -webkit-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -moz-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+}
+
+#displaySalaryDept{
+  background-color: #434EE8; 
+  border-radius: 20px;
+  border: 1px solid #434EE8;
+  position: absolute;
+  top: 23%;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+#displaySalaryDeptText{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  float:left;
+  color: white;
+}
+
+#displaySalaryDept:hover{
+  cursor: pointer;
+  box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -webkit-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -moz-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+}
+
+#search {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#topToolsDiv{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-left: 300px;
+  margin-bottom: 70px;
+}
+
+.filterSelector{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#startFilter{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+ 
+}
+
+#endFilter{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+
+.mutipleFieldSelector{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.spanGrouper{
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+  margin-left: 60px;
+}
+
+#filterText{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+#sortText{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+
+#filterButton{
+  background-color: #434EE8; 
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 70px;
+  height: 30px;
+  float: right;
+  margin-top: 10px;
+}
+
+#filterButton:hover{
+  cursor: pointer;
+}
+
+#filterButton:active{
+  transform: scale(.98)
+}
+
+#removeFilterButton{
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#removeFilterButton:hover{
+  cursor: pointer;
+}
+
+#removeFilterButton:active{
+  transform: scale(.98)
+}
+
+#sortButton{
+  background-color: #434EE8; 
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 70px;
+  height: 30px;
+  float: right;
+  margin-top: 10px;
+}
+
+#sortButton:hover{
+  cursor: pointer;
+ }
+
+#sortButton:active{
+  transform: scale(.98)
+}
+
+#removeSortButton{
+ background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#removeSortButton:hover{
+  cursor: pointer;
+}
+
+#removeSortButton:active{
+  transform: scale(.98)
+}
+
+.backButton{
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 70px;
+  height: 30px;
+}
+
+.backButton:hover{
+  cursor: pointer;
+}
+
+#treeDiv{
+  padding-top: 50px;
+  padding-left: 70px;
+}
+
+.bottomActionButtons{
+  display: flex;
+  float: right;
+  padding-right: 50px;
+}
+
+.getAllEmployees{
+  background-color: #434EE8; 
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-in-out;
+  /*margin-left: 75vw;*/
+  width: 180px;
+  font-size: 0.7em;
+}
+
+.getAllEmployees:hover{
+  cursor: pointer;
+  box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -webkit-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+  -moz-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+}
+
+.getAllEmployees:active{
+  transform: scale(.98)
+}
+
+@media only screen and (max-width: 1920px) {
+  #displayTreeButton{
+    top: 17%;
+  }
+  
+  #displaySalaryRole{
+    top: 22%;
+  }
+
+  #displaySalaryDept{
+    top: 27%;
+  }
+}

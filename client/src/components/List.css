@@ -1,0 +1,42 @@
+.cardTitle{
+    background-color: transparent;
+    margin: auto;
+    width: 90%;
+    min-width: 1300px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+.card{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    min-width: 1300px;
+    box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+    -webkit-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+    -moz-box-shadow: -1px 2px 8px -3px rgba(0,0,0,0.61);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  .listDataTitle{
+    color: #999999;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    width: 3.8vw;
+    min-width: 60px;
+    font-size: 0.7em;
+  }
+  .listData{
+    color: #333333;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    width: 3.8vw;
+    min-width: 60px;
+    font-size: 0.8em;
+  }
+
