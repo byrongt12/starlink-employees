@@ -34,9 +34,11 @@ const getEmployees = () => {
 
     pool.query('SELECT e.id, e.name, e.surname, e.birthdate, e.employee_number, e.marital_status, e.post_code, e.address_1, e.address_2, e.contact_no, c.country_name, s.total_salary, r.reporting_line, rl.role_name, de.dep_name, di.div_name, com.comp_name, o.org_name, q.qual_level FROM "Employees" e JOIN "EmpRole" r ON e.employee_number=r.employee_number JOIN "EmpSalary" s ON r.salary_id=s.salary_id JOIN "Countries" c ON e.country_id=c.country_id JOIN "EmpQualification" q ON r.qual_id=q.qual_id JOIN "Role" rl ON r.role_id=rl.role_id JOIN "Department" de ON r.dep_id=de.dep_id JOIN "Division" di ON de.div_id=di.div_id JOIN "Company" com ON di.comp_id=com.comp_id JOIN "Organization" o ON com.org_id=o.org_id;', (error, results) => {
       if (error) {
+        console.log(error)
         reject(error)
       }
       if (!results){
+        console.log("SQL FAIL")
         resolve()
       }
       else{
