@@ -3,18 +3,21 @@ const app = express()
 const port = 3001
 const employee_model = require('./employee_model')
 const path = require("path")
+const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 
 //process.env.PORT
 
+
 //middleware
-app.use(express.static(path.join(__dirname, "client/build")))
+app.use(cors())
+app.use(express.json())
+
+//app.use(express.static(path.join(__dirname, "client/build")))
 if (process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, "client/build")))
 }
 
-
-app.use(express.json())
 
 
 app.use(function (req, res, next) {
