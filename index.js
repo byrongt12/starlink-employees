@@ -6,8 +6,6 @@ const path = require("path")
 const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 
-//process.env.PORT
-
 
 //middleware
 app.use(cors())
@@ -18,10 +16,8 @@ if (process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, "client/build")))
 }
 
-
-
 app.use(function (req, res, next) {
-  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();

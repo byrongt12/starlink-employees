@@ -7,9 +7,9 @@ const devConfig = {
   database: process.env.PG_DATABASE,
   password: process.env.PG_PASSWORD,
   port: process.env.PG_PORT,
-  ssl: {
+  /*ssl: {
     rejectUnauthorized: false,
-  }
+  }*/
 }
 
 const proConfig = {
@@ -147,6 +147,8 @@ const sortEmployees = (body) => {
   })
 }
 
+
+// Not used
 const createEmployee = (body) => {
   return new Promise(function(resolve, reject) {
     const { name, surname, birthdate, employee_number, salary, role_desc, reporting_line } = body
@@ -158,6 +160,8 @@ const createEmployee = (body) => {
     })
   })
 }
+
+// Not used
 const deleteEmployee = (body) => {
   return new Promise(function(resolve, reject) {
   

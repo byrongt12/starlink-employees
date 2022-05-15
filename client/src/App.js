@@ -12,7 +12,6 @@ import MultipleFieldSelector from './components/MultipleFieldSelector';
 import { GiCheckboxTree   } from 'react-icons/gi';
 import { BsBuilding   } from 'react-icons/bs';
 import { BsPerson   } from 'react-icons/bs';
-import ReactDOM from 'react-dom'
 
 import moment from 'moment';
 
@@ -106,8 +105,6 @@ function App() {
     }
   };
 
-  //proxy
-
   function getEmployee() {
     fetch('/employees')
       .then(response => {
@@ -140,8 +137,6 @@ function App() {
         setSgdDataArr(Array.from(JSON.parse(data)));
       });
   }
-
-
 
   function isNumber(str) {
     if (str.trim() === '') {
@@ -379,7 +374,6 @@ function App() {
             </div>
           </div>
           <List input={inputText} data={employeesArr}/>
-          
         
           </>
           }
