@@ -152,12 +152,12 @@ function App() {
 
   function filterInputChecker() {
 
-    if (selectedFilterField == ''){
+    if (selectedFilterField === ''){
       getEmployee()
       return
     }
     
-    if (selectedFilterField == 'Birthdate'){
+    if (selectedFilterField === 'Birthdate'){
 
       const dateFormat = 'YYYY-MM-DD'
       var startDateStr = moment(selectedStartFilter.toString(), dateFormat, true);
@@ -168,7 +168,7 @@ function App() {
         return
       }
 
-      if (!endDateStr.isValid() && selectedEndFilter != ''){
+      if (!endDateStr.isValid() && selectedEndFilter !== ''){
         alert("Please enter a correct end date (YYYY-MM-DD)")
         return
       }
@@ -178,7 +178,7 @@ function App() {
         alert("Please enter a valid start number")
         return
       }
-      if(!isNumber(selectedEndFilter) && selectedEndFilter != ''){
+      if(!isNumber(selectedEndFilter) && selectedEndFilter !== ''){
         alert("Please enter a valid end number")
         return
       }
