@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Theme, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 
 const ITEM_HEIGHT = 48;
@@ -20,8 +19,6 @@ const MenuProps = {
 };
 
 export default function MultipleSelectChip(props) {
- 
-  const [personName, setPersonName] = React.useState([]);
 
   var fieldNames = props.allFields
 

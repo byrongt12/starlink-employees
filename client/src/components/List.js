@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import './List.css'
 function List(props) {
 
@@ -24,7 +24,7 @@ function List(props) {
             || el.comp_name.toLowerCase().includes(props.input) 
             || el.org_name.toLowerCase().includes(props.input) 
             || el.qual_level.toLowerCase().includes(props.input) 
-            || el.reporting_line && el.reporting_line.toString().toLowerCase().includes(props.input) 
+            || (el.reporting_line && el.reporting_line.toString().toLowerCase().includes(props.input)) 
         }
     })
     return (

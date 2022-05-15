@@ -4,15 +4,6 @@ import './EmployeeTree.css'
 
 
 export default function EmployeeTree(props) {
-
-    const treeStyles = {
-        position: 'absolute',
-        top: 40,
-        left: 40,
-        color: 'black',
-        fill: 'black',
-        width: '100%'
-      }
       
     const typeStyles = {
       fontSize: '3.8em',
